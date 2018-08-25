@@ -1,0 +1,109 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="AppTheme.NoActionBar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.NoActionBar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="WrapContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="MatchParent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="Text.Medium" parent="@android:style/TextAppearance.Medium">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="Text.Black" parent="Text.Medium">
+        <item name="android:textColor">@color/black_effective</item>
+    </style>
+
+    <style name="Text.Accent" parent="Text.Medium">
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="Text.Splash.Title" parent="Text.Black">
+        <item name="android:textSize">@dimen/seventy_five_dp</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Text.Splash.Subtitle" parent="Text.Accent">
+        <item name="android:textSize">@dimen/thirty_sp</item>
+        <item name="android:fontFamily">serif-monospace</item>
+    </style>
+
+    <style name="Text.Main.Title" parent="Text.Black">
+        <item name="android:textSize">@dimen/twenty_sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+
+    <style name="ImageLoading" parent="MatchParent">
+        <item name="android:layout_height">@dimen/one_hundred_fifty_dp</item>
+        <item name="android:visibility">visible</item>
+    </style>
+
+    <style name="ImageVertical" parent="MatchParent">
+        <item name="android:layout_width">@dimen/two_hundred_dp</item>
+        <item name="android:src">@mipmap/ic_launcher_round</item>
+    </style>
+
+    <style name="ImageHorizontal" parent="MatchParent">
+        <item name="android:src">@mipmap/ic_launcher_round</item>
+    </style>
+
+    <style name="LayoutClick" parent="MatchParent">
+        <item name="android:clickable">true</item>
+        <item name="android:background">?android:attr/selectableItemBackground</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="HorizontalCard" parent="MatchParent">
+        <item name="android:layout_height">@dimen/eighty_dp</item>
+        <item name="android:padding">@dimen/ten_dp</item>
+    </style>
+
+    <style name="Text.Card.Subtitle" parent="WrapContent">
+        <item name="android:layout_marginStart">@dimen/three_dp</item>
+        <item name="android:textSize">@dimen/twelve_sp</item>
+    </style>
+
+    <style name="ScrollbarVertical">
+        <item name="android:scrollbars">vertical</item>
+    </style>
+
+    <style name="ScrollbarHorizontal">
+        <item name="android:scrollbars">horizontal</item>
+    </style>
+
+    <style name="SocialShare" >
+        <item name="android:layout_width">@dimen/twenty_five_dp</item>
+        <item name="android:layout_height">@dimen/twenty_five_dp</item>
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_margin">@dimen/five_dp</item>
+        <item name="android:background">@drawable/button_round</item>
+    </style>
+</resources>

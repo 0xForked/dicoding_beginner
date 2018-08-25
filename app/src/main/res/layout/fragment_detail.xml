@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:id="@+id/layout_loading_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <include layout="@layout/item_loading"/>
+    </RelativeLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        android:id="@+id/swipeRefreshLayout">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+            <RelativeLayout
+                android:padding="@dimen/twenty_dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/header_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    tools:ignore="UselessParent">
+                    <TextView
+                        style="@style/Text.Main.Title"
+                        android:hint="@string/item_title"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="@dimen/twenty_five_sp"
+                        android:gravity="center"
+                        android:id="@+id/detail_title"/>
+                    <TextView
+                        style="@style/Text.Card.Subtitle"
+                        android:layout_below="@+id/detail_title"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/five_dp"
+                        android:hint="@string/item_author"
+                        android:id="@+id/detail_subtitle"/>
+
+                    <LinearLayout
+                        android:id="@+id/share_layout"
+                        android:layout_below="@id/detail_subtitle"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/ten_dp"
+                        android:padding="@dimen/three_dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <ImageButton
+                            style="@style/SocialShare"
+                            android:src="@drawable/facebook_circle"
+                            android:contentDescription="@null"
+                            android:id="@+id/facebook_share"/>
+                        <ImageButton
+                            style="@style/SocialShare"
+                            android:src="@drawable/twitter_circle"
+                            android:contentDescription="@null"
+                            android:id="@+id/twitter_share"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/header_layout"
+                    android:id="@+id/detail_image"
+                    android:contentDescription="@null" />
+                <TextView
+                    style="@style/WrapContent"
+                    android:layout_below="@+id/detail_image"
+                    android:id="@+id/detail_content"
+                    android:layout_marginTop="@dimen/fifteen_dp"/>
+                <Button
+                    style="@style/WrapContent"
+                    android:layout_below="@+id/detail_content"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/button_round"
+                    android:textAllCaps="false"
+                    android:id="@+id/btn_source"
+                    android:text="@string/source"/>
+
+            </RelativeLayout>
+        </ScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</android.support.constraint.ConstraintLayout>

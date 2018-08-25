@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/one_hundred_dp"
+    android:background="@color/colorPrimaryLight"
+    android:padding="@dimen/three_dp"
+    tools:context="id.aasumitro.dicodingbeginner.ui.main.dialog.SourceDialog">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            tools:ignore="UselessParent">
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="@dimen/one_hundred_fifty_dp"
+                android:layout_height="@dimen/fifty_dp"
+                android:layout_margin="@dimen/twenty_dp"
+                android:prompt="@string/select_source"
+                android:entries="@array/source_list"
+                android:background="@color/white"/>
+
+            <Button
+                android:id="@+id/btn_save"
+                style="@style/WrapContent"
+                android:layout_margin="@dimen/twenty_dp"
+                android:text="@string/text_save"/>
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+</android.support.constraint.ConstraintLayout>
