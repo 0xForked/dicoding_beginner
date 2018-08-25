@@ -109,8 +109,13 @@ class HomeFragment : Fragment(), HomeNavigation, HorizontalListener, VerticalLis
     }
 
     override fun onHorizontalItemClick(headline: Headline) {
+        val author =
+                if (headline.author === null)
+                    source()!!.toUpperCase()
+                else
+                    headline.author!!
         mViewModelMain.setData(
-                headline.author!!,
+                author,
                 headline.title,
                 headline.description,
                 headline.url,

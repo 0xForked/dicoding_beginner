@@ -19,7 +19,7 @@ import id.aasumitro.dicodingbeginner.utlil.AppConst
 
 class SplashActivity : AppCompatActivity(), SplashNavigation {
 
-    private val mDefaultSource = "cnn"
+    private val mDefaultSource = "bbc-news"
 
     private val mViewModel: SplashViewModel by lazy {
         ViewModelProviders.of(this).get(SplashViewModel::class.java)
