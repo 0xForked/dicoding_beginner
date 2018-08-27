@@ -109,18 +109,14 @@ class HomeFragment : Fragment(), HomeNavigation, HorizontalListener, VerticalLis
     }
 
     override fun onHorizontalItemClick(headline: Headline) {
-        val author =
-                if (headline.author === null)
-                    source()!!.toUpperCase()
-                else
-                    headline.author!!
+        val author: String = headline.author ?: source()!!.toUpperCase()
         mViewModelMain.setData(
                 author,
                 headline.title,
                 headline.description,
                 headline.url,
-                headline.urlToImage!!,
-                headline.publishedAt!!)
+                headline.urlToImage,
+                headline.publishedAt)
         mViewModelMain.replaceWithDetail()
     }
 
@@ -138,18 +134,14 @@ class HomeFragment : Fragment(), HomeNavigation, HorizontalListener, VerticalLis
     }
 
     override fun onVerticalItemClick(everything: Everything) {
-        val author =
-                if (everything.author === null)
-                    source()!!.toUpperCase()
-                else
-                    everything.author!!
+        val author: String = everything.author ?: source()!!.toUpperCase()
         mViewModelMain.setData(
                 author,
                 everything.title,
                 everything.description,
                 everything.url,
-                everything.urlToImage!!,
-                everything.publishedAt!!)
+                everything.urlToImage,
+                everything.publishedAt)
         mViewModelMain.replaceWithDetail()
     }
 

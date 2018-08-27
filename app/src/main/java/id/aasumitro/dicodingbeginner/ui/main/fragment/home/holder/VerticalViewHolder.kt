@@ -34,7 +34,7 @@ class VerticalViewHolder(view: View) : RecyclerView.ViewHolder(view) {
                 .centerInside()
                 .into(itemView.img_vertical)
         itemView.txt_vertical_title.text = everything.title
-        val mSource = "("+source(context.applicationContext)!!.toUpperCase()+")"
+        val mSource = "("+source(context.applicationContext)?.toUpperCase()+")"
         itemView.txt_vertical_source.text = mSource
         if (everything.author !== null) {
             itemView.txt_vertical_author.text = everything.author
@@ -44,7 +44,7 @@ class VerticalViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         } else {
             itemView.txt_vertical_author.visibility = View.GONE
         }
-        itemView.txt_vertical_published.text = dateHelper(everything.publishedAt!!)
+        itemView.txt_vertical_published.text = dateHelper(everything.publishedAt)
         itemView.lay_vertical_click.setOnClickListener { listener.onVerticalItemClick(everything) }
 
     }

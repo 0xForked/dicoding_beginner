@@ -19,7 +19,7 @@ import id.aasumitro.dicodingbeginner.R
  * aasumitro@gmail.com
  */
 
-fun dateHelper (date: String) : String? {
+fun dateHelper (date: String?) : String {
     val dateFormat = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.ENGLISH)
     val fullDateUpdated = dateFormat.parse(date)
     val previousCal = Calendar.getInstance()

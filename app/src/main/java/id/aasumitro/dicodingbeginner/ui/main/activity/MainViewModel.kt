@@ -28,7 +28,7 @@ class MainViewModel : ViewModel() {
     fun replaceWithDetail() = mNavigator?.replaceWithDetail()
 
     fun setData(author: String, title: String, description: String,
-                 url: String, urlToImage: String, publishedAt: String) {
+                 url: String, urlToImage: String?, publishedAt: String?) {
         this.author = author
         this.title = title
         this.description = description

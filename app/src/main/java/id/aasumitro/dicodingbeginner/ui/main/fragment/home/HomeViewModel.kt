@@ -36,20 +36,20 @@ class HomeViewModel : ViewModel() {
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe ({ onSuccess ->
-                    mNavigator!!.onLoading(true)
+                    mNavigator?.onLoading(true)
                     if (onSuccess.status === "error") {
-                        mNavigator!!.onSuccess(false, onSuccess.code, onSuccess.message)
-                        mNavigator!!.onLoading(false)
+                        mNavigator?.onSuccess(false, onSuccess.code, onSuccess.message)
+                        mNavigator?.onLoading(false)
                     } else {
                         listHorizontal = onSuccess.articles as ArrayList<Headline>
-                        mNavigator!!.initHorizontalAdapter().let {
-                            mNavigator!!.onLoading(false)
+                        mNavigator?.initHorizontalAdapter().let {
+                            mNavigator?.onLoading(false)
                         }
                     }
                 }, { onError ->
                     onError.printStackTrace()
                     onError.let {
-                        mNavigator!!.onLoading(false)
+                        mNavigator?.onLoading(false)
                     }
                 })
     }
@@ -61,21 +61,21 @@ class HomeViewModel : ViewModel() {
                 .subscribeOn(Schedulers.newThread())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe  ({ onSuccess ->
-                    mNavigator!!.onLoading(true)
+                    mNavigator?.onLoading(true)
                     if (onSuccess.status === "error") {
-                        mNavigator!!.onSuccess(false, onSuccess.code, onSuccess.message)
-                        mNavigator!!.onLoading(false)
+                        mNavigator?.onSuccess(false, onSuccess.code, onSuccess.message)
+                        mNavigator?.onLoading(false)
                     } else {
                         listVertical = onSuccess.articles as ArrayList<Everything>
-                        mNavigator!!.initVerticalAdapter().let {
-                            mNavigator!!.onLoading(false)
+                        mNavigator?.initVerticalAdapter().let {
+                            mNavigator?.onLoading(false)
                         }
                     }
                     Log.d("DataFromServer", onSuccess.toString())
                 }, { onError ->
                     onError.printStackTrace()
                     onError.let {
-                        mNavigator!!.onLoading(false)
+                        mNavigator?.onLoading(false)
                     }
                 })
     }
